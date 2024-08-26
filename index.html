@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Income-Expense Calculator</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h2>Income Expense Calculator</h2>
+    </header>
+
+    <!-- display income expanse and netamount -->
+    <div class="money-display">
+        <div id="total-income">Total Income: $0</div>
+        <div id="total-expense">Total Expenses: $0</div>
+        <div id="net-amount">Net Amount: $0</div>
+    </div>
+
+    <!-- input fileds -->
+    <div class="fileds-conatiner">
+        <div class="container">
+            <input type="text" id="description" class="description" placeholder="Enter Description" required>
+            <input type="number" id="amount" class="amount" placeholder="Enter Amount" required>
+            <select id="type" class="type" required>
+                <option value="income">INCOME</option>
+                <option value="expense">EXPENSE</option>
+            </select>
+            <button id="add-btn" class="add-btn">Add To List</button>
+        </div>
+
+        <!-- filter flieds -->
+        <div>
+            <section class="filters">
+                <label><input type="radio" name="filter" value="all" checked> All</label>
+                <label><input type="radio" name="filter" value="income"> Income</label>
+                <label><input type="radio" name="filter" value="expense"> Expense</label>
+            </section>
+
+            <!-- Expense List show -->
+            <section class="entry-list">
+                <ol id="entries"></ol>
+            </section>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
