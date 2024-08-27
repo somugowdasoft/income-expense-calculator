@@ -5,6 +5,10 @@ document.querySelectorAll('input[name="filter"]').forEach(radio => {
     radio.addEventListener('change', filterEntries);
 });
 
+const descriptionInput = document.getElementById("description");
+const amountInput = document.getElementById("amount");
+const typeInput = document.getElementById("type");
+
 // filter constants
 const ALL = "all";
 const INCOME = "income";
@@ -12,9 +16,9 @@ const EXPENSE = "expense"
 
 // adding functionality
 function addExanpse() {
-    const description = document.getElementById("description").value;
-    const amount = document.getElementById("amount").value;
-    const type = document.getElementById("type").value;
+    const description = descriptionInput.value.trim();
+    const amount = amountInput.value.trim();
+    const type = typeInput.value;
 
     if (description && amount) {
         const entry = { id: Date.now(), description, amount, type }
@@ -22,7 +26,11 @@ function addExanpse() {
         updateEntries();
         displayEntries();
         updateTotals();
+
+        descriptionInput.value = "";
+        amountInput.value = "";
     }
+   
 }
 
 // Listing the expense
