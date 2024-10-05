@@ -1,14 +1,16 @@
 body {
-    margin: 0;
+    margin: 10px;
     padding: 0;
-    background-color: hsla(207, 41%, 75%, 0.4);
+    background-color: lightblue;
     font-family: 'Courier New', Courier, monospace;
 }
 
 header {
     text-align: center;
-    background-color: rgb(51, 51, 51, 0.4);
+    background-color: DodgerBlue;
     border: 1px outset black;
+    color: white;
+    border-radius: 2px;
 }
 
 
@@ -16,9 +18,10 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: gray;
+    background-color: MediumSeaGreen;
     font-weight: bold;
     padding: 8px;
+    color: white;
 }
 
 /* media query */
@@ -80,17 +83,18 @@ header {
 .add-btn {
     width: 40%;
     height: 30px;
-    border: 2px outset gray;
+    border: 2px outset DodgerBlue;
     border-radius: 3px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
-    background: linear-gradient(to right, #7EC4EA, #decdd8);
+    background: rgb(73,171,109);
     overflow: hidden;
     cursor: pointer;
+    color: white;
 }
 
 .add-btn:hover{
-    color: #746d71;
+    color: black;
 }
 
 .entry-list ol {
@@ -101,7 +105,8 @@ header {
 
 .entry-list li {
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid DodgerBlue;
+    border-radius: 5px;
     margin: 10px;
     padding: 10px;
     display: flex;
@@ -109,11 +114,13 @@ header {
 }
 
 .entry-list li.income {
-    color: green;
+    color: white;
+    background-color: rgba(57,128,0,0.6);
 }
 
 .entry-list li.expense {
-    color: red;
+    color: white;
+    background-color: rgba(241,50,0,0.6);
 }
 
 .entry-list button {
@@ -134,3 +141,7 @@ header {
     vertical-align: middle;
   }
   
+
+  li{
+    border: 1px solid red;
+  }
